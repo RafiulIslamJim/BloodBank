@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="max-w-screen-3xl container mx-auto fixed top-0 left-0 right-0 z-50">
+    <div className="max-w-screen-3xl  mx-auto fixed top-0 left-0 right-0 z-50 ">
       <div className="navbar bg-white justify-around">
         <div className="navbar-start">
           <div className="dropdown ">
@@ -28,7 +28,7 @@ const Navbar = () => {
               <li className=" hover:bg-red-600 hover:text-[#010d6e] rounded-full"><Link to='/about'>About</Link></li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl text-red-600">SECBloodBond</a>
+          <Link to='/' className="btn btn-ghost text-xl text-red-600">SECBloodBond</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-red-600 font-bold">

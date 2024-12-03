@@ -52,7 +52,7 @@ const Hero = () => {
     <section
     id="home"
     data-aos="fade-up"
-    className="h-[35vh] md:h-[65vh] container mx-auto mb-10 flex justify-between items-center shadow-2xl text-white relative top-16 sm:px-8 overflow-hidden md:rounded-badge"
+    className="h-[35vh] md:h-[65vh]  mx-auto mb-10 flex justify-between items-center shadow-2xl text-white relative top-16 sm:px-8 overflow-hidden"
     style={{
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',

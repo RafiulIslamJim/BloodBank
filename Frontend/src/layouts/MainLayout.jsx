@@ -5,14 +5,14 @@ import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (
-    <div className="bg-white overflow-hidden ">
+    <div className="bg-red-500 overflow-hidden">
       <div>
         <Navbar/>
         <ScrollingText/>
       </div>
       <Outlet/>
       <div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   )

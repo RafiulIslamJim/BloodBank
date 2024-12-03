@@ -61,13 +61,13 @@ const Blogs = () => {
   return (
    <div className="mt-24">
     <h1 className="font-bold text-[#010d6e] text-center text-4xl">Blogs</h1>
-     <div className="pt-10 h-[35vh]">
+     <div className="pt-5 h-[35vh]">
      <Slider {...settings}>
            {blogs.map((blog) => (
             <BlogCard blog = {blog} key={blog.id}/>
            ))}
           </Slider>
-          <hr className="w-[88vw]  mx-auto my-10 sm:my-15 h-2 bg-gradient-to-r from-[#010d6e] via-red-600 to-white  rounded-full" />
+          
     </div>
     
    </div>

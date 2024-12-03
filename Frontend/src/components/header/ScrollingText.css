@@ -1,0 +1,21 @@
+.scrolling-text {
+  display: inline-block;
+  min-width: 80%;
+  animation: scroll-text 20s linear infinite;
+  animation-play-state: running; 
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%); 
+  }
+  96% {
+    transform: translateX(-100%); 
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+}
+.scrolling-text:hover {
+  animation-play-state: paused; 
+}

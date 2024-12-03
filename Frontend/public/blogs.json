@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "author": "John Doe",
+    "batch": 15,
+    "opinion": "Blood donation is a noble act that can save countless lives. Everyone should contribute."
+  },
+  {
+    "id": 2,
+    "author": "Jane Smith",
+    "batch": 16,
+    "opinion": "Donating blood is not only safe but also a way to give back to society. It's our duty."
+  },
+  {
+    "id": 3,
+    "author": "Ali Khan",
+    "batch": 14,
+    "opinion": "A single blood donation can make a huge difference in someone's life. Let's donate regularly."
+  },
+  {
+    "id": 4,
+    "author": "Maya Lee",
+    "batch": 17,
+    "opinion": "Blood donors are real-life heroes. I encourage everyone to be one."
+  },
+  {
+    "id": 5,
+    "author": "Arjun Patel",
+    "batch": 13,
+    "opinion": "Blood donation takes only a few minutes but can save lives in emergencies."
+  },
+  {
+    "id": 6,
+    "author": "Sara Ahmed",
+    "batch": 16,
+    "opinion": "It's an amazing feeling to know that your blood can save someone's life. Donate blood, save lives!"
+  },
+  {
+    "id": 7,
+    "author": "Carlos Gomez",
+    "batch": 12,
+    "opinion": "Blood donation is a selfless act that has the power to change lives. Everyone should consider it."
+  },
+  {
+    "id": 8,
+    "author": "Emily Watson",
+    "batch": 15,
+    "opinion": "Donating blood is a small act of kindness that has a huge impact on our community."
+  },
+  {
+    "id": 9,
+    "author": "Hassan Ali",
+    "batch": 14,
+    "opinion": "Blood donation should be a habit for all healthy individuals. It's a lifesaving gift."
+  },
+  {
+    "id": 10,
+    "author": "Sophia Kim",
+    "batch": 13,
+    "opinion": "Donating blood is one of the simplest ways to make a big difference in someone's life."
+  }
+]

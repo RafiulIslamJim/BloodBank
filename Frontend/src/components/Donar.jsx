@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const DonarCard = ({ name, batch, department, bloodGroup, lastDonationDate }) => {
+const DonarCard = ({ name, batch, bloodGroup, lastDonationDate,phone_number }) => {
   const currentDate = new Date();
   const donationDate = new Date(lastDonationDate);
 
@@ -22,7 +22,7 @@ const DonarCard = ({ name, batch, department, bloodGroup, lastDonationDate }) =>
     >
       <h3 className="font-semibold text-lg text-[#010d6e]">{name}</h3>
       <p className="text-sm text-[#010d6e]">Batch: {batch}</p>
-      <p className="text-sm text-[#010d6e]">Department: {department}</p>
+      <p className="text-sm text-[#010d6e]">Phone: {phone_number}</p>
       <p className="text-sm text-[#010d6e]">Blood Group: {bloodGroup}</p>
       <h1
         className={`w-28 text-center text-white rounded-md p-1 mt-2 ${
@@ -38,7 +38,7 @@ const DonarCard = ({ name, batch, department, bloodGroup, lastDonationDate }) =>
 DonarCard.propTypes = {
   name: PropTypes.string.isRequired,
   batch: PropTypes.string.isRequired,
-  department: PropTypes.string.isRequired,
+  phone_number: PropTypes.number.isRequired,
   bloodGroup: PropTypes.string.isRequired,
   lastDonationDate: PropTypes.string.isRequired,
 };
@@ -63,7 +63,12 @@ const Donar = () => {
   }, []);
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      offset: 200,
+      duration: 800,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
     AOS.refresh();
   }, []);
 
@@ -115,20 +120,21 @@ const Donar = () => {
         </header>
         <div className="bg-white px-6 py-4 w-full max-w-6xl rounded-b-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {currentDonars.length > 0 ? (
-              currentDonars.map((donar, index) => (
-                <DonarCard
+          {currentDonars.length > 0 ? (
+                currentDonars.map((donar, index) => (
+                  <DonarCard
                   key={index}
                   name={donar.name}
                   batch={donar.batch}
-                  department={donar.department}
                   bloodGroup={donar.blood_group}
                   lastDonationDate={donar.last_date_of_blood_donation}
+                  phone_number={donar.phone_number || donar.phoneNumber} // Match the key
                 />
-              ))
-            ) : (
-              <p className="col-span-full text-center text-gray-500">No donors found</p>
-            )}
+
+                ))
+              ) : (
+                <p className="col-span-full text-center text-gray-500">No donors found</p>
+              )}
           </div>
           <div className="flex justify-center mt-6">
             <button

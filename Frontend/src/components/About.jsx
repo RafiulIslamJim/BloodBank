@@ -4,7 +4,12 @@ import 'aos/dist/aos.css';
 
 const About = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      offset: 200,
+      duration: 800,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
     AOS.refresh();
   }, []);
 

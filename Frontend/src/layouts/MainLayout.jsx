@@ -7,7 +7,7 @@ const MainLayout = () => {
   return (
     <div className="bg-red-500 overflow-hidden">
       <div>
-        <Navbar/>
+        <Navbar id ="home"/>
         <ScrollingText/>
       </div>
       <Outlet/>

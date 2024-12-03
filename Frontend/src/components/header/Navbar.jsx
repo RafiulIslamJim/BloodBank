@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import Login from "../Login";
 
 const Navbar = () => {
   return (
-    <div className="max-w-screen-3xl  mx-auto fixed top-0 left-0 right-0 z-50 ">
+    <div id="home" className="max-w-screen-3xl  mx-auto fixed top-0 left-0 right-0 z-50 ">
       <div className="navbar bg-white justify-around">
         <div className="navbar-start">
           <div className="dropdown ">
@@ -32,14 +33,22 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-red-600 font-bold">
-            <li className=" hover:bg-red-600 hover:text-[#010d6e] rounded-full"><Link to='/'>Home</Link></li>
-            <li className=" hover:bg-red-600 hover:text-[#010d6e] rounded-full"><Link to='/donars'>Donars</Link></li>
-            <li className=" hover:bg-red-600 hover:text-[#010d6e] rounded-full"><Link to='/about'>About</Link></li>
+            <li className="  hover:bg-[#010d6e] hover:text-white   duration-300 cursor-pointer rounded-full"><Link to='/'>Home</Link></li>
+            <li className="  hover:bg-[#010d6e] hover:text-white  duration-300 cursor-pointer rounded-full"><Link to='/donars'>Donars</Link></li>
+            <li className="  hover:bg-[#010d6e] hover:text-white  duration-300 cursor-pointer rounded-full"><Link to='/about'>About</Link></li>
           </ul>
         </div>
-        <button className=" bg-red-600 text-white px-6 py-2 rounded-lg  sm:px-4 sm:py-1 text-sm">
-          Login
-        </button>
+        <div className="">
+                <a
+                  className="bg-red-600 text-white px-3 py-2 rounded-md hover:bg-[#010d6e] duration-300 cursor-pointer"
+                  onClick={() =>
+                    document.getElementById("my_modal_3").showModal()
+                  }
+                >
+                  Login
+                </a>
+                <Login />
+              </div>
         
       </div>
     </div>

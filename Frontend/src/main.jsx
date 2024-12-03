@@ -6,6 +6,7 @@ import Donar from './components/Donar.jsx'
 import About from './components/About.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './components/Home.jsx'
+import SignUp from './components/SignUp.jsx'
 
 const router = createBrowserRouter(
   [
@@ -28,6 +29,10 @@ const router = createBrowserRouter(
         },
       ]
     },
+    {
+      path: '/signup',
+      element: <SignUp/>
+    }
   ]
 )
 

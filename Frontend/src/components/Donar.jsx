@@ -38,10 +38,12 @@ const DonarCard = ({ name, batch, bloodGroup, lastDonationDate,phone_number }) =
 DonarCard.propTypes = {
   name: PropTypes.string.isRequired,
   batch: PropTypes.string.isRequired,
-  phone_number: PropTypes.number.isRequired,
+  phone_number: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    .isRequired,
   bloodGroup: PropTypes.string.isRequired,
   lastDonationDate: PropTypes.string.isRequired,
 };
+
 
 const Donar = () => {
   const donars = useLoaderData(); // Fetch donor data from loader
@@ -123,13 +125,14 @@ const Donar = () => {
           {currentDonars.length > 0 ? (
                 currentDonars.map((donar, index) => (
                   <DonarCard
-                  key={index}
-                  name={donar.name}
-                  batch={donar.batch}
-                  bloodGroup={donar.blood_group}
-                  lastDonationDate={donar.last_date_of_blood_donation}
-                  phone_number={donar.phone_number || donar.phoneNumber} // Match the key
-                />
+                    key={index}
+                    name={donar.name}
+                    batch={donar.batch}
+                    bloodGroup={donar.blood_group}
+                    lastDonationDate={donar.last_date_of_blood_donation}
+                    phone_number={Number(donar.phone_number || donar.phoneNumber)} // Convert to number
+                  />
+
 
                 ))
               ) : (

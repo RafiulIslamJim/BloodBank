@@ -41,7 +41,7 @@ const Footer = () => {
         {/* Scroll to Top Icon */}
         <div
           id="icon-box"
-          className="bg-[#010d6e] p-2 rounded-full hover:bg-orange-500 cursor-pointer fixed bottom-12 right-6 shadow-lg"
+          className="bg-[#010d6e] p-2 rounded-full hover:bg-orange-500  cursor-pointer fixed bottom-12 right-6 shadow-lg"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <img src={toparrow} alt="Go to top" width={35} height={40} />

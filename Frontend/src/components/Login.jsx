@@ -13,7 +13,7 @@ const Login = () => {
     // Add your login logic here
   };
 
-  const openModal = () => document.getElementById("my_modal_3").showModal();
+  // const openModal = () => document.getElementById("my_modal_3").showModal();
   const closeModal = () => document.getElementById("my_modal_3").close();
 
   return (

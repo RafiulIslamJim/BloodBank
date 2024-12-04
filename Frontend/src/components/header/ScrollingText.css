@@ -1,7 +1,7 @@
 .scrolling-text {
   display: inline-block;
   min-width: 80%;
-  animation: scroll-text 20s linear infinite;
+  animation: scroll-text 50s linear infinite;
   animation-play-state: running; 
 }
 
